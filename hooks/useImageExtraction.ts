@@ -8,14 +8,17 @@ export function useImageExtraction(url: string) {
     useEffect(() => {
         ;(async () => {
             try {
-                const rawResponse = await fetch('http://localhost:3000/api/', {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ url: url }),
-                })
+                const rawResponse = await fetch(
+                    `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/api`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ url: url }),
+                    }
+                )
                 const content = await rawResponse.json()
                 setImageUrl(content?.data)
             } catch (err) {
