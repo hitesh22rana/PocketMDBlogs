@@ -1,4 +1,4 @@
-// Custom Hook to extrtact image from the URL's Metadata
+// Custom React Hook to extrtact image from the URL's Metadata
 
 import { useState, useEffect } from 'react'
 
