@@ -16,6 +16,7 @@
     "graphql": "^16.5.0",
     "html-metadata-parser": "^2.0.4",
     "next": "12.2.5",
+    "nextjs-cors": "^2.1.1",
     "react": "18.2.0",
     "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "18.2.0",
